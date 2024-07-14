@@ -1,0 +1,543 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewsFlash | Home</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon.png"
+    />
+    <!-- Remix icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Swiper.js styles -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/160cb98c34.js" ></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <img
+        class="logo-png"
+        src="/Starter/assets/images/Main Logo/logo.png"
+        width="40px"
+      />
+      <nav class="navbar container">
+        <a href="/Starter/index.html">
+          <!--  <h2 class="logo">BlogSphree</h2> -->
+        </a>
+        <div class="menu" id="menu">
+          <ui class="list">
+            <li class="list-item">
+              <a href="#" class="list-link current">Home</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">Categories</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">New Post</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link screen-lg-hidden">Sign In</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link screen-lg-hidden">Sign Up</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">Pricing</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">About Us</a>
+            </li>
+          </ui>
+        </div>
+        <div class="list list-right">
+          <button class="btn place-item-center" id="theme-toggle-btn">
+            <i class="ri-sun-line sun-icon"></i>
+            <i class="ri-moon-line moon-icon"></i>
+          </button>
+          <button class="btn place-item-center" id="search-icon">
+            <i class="ri-search-line"></i>
+          </button>
+
+          <button
+            class="btn place-item-center screen-lg-hidden menu-toggle-icon"
+            id="menu-toggle-icon"
+          >
+            <i class="ri-menu-3-line open-menu-icon"></i>
+            <i class="ri-close-line close-menu-icon"></i>
+          </button>
+
+          <a href="" class="list-link screen-sm-hidden">Sign In</a>
+          <a
+            href=""
+            class="list-link screen-sm-hidden btn sign-up-btn fancy-border"
+            >Sign Up</a
+          >
+        </div>
+      </nav>
+    </header>
+    <!-- Search -->
+    <div class="search-form-container container" id="search-form-container">
+      <div class="form-container-inner">
+        <form action="" class="from" id="search-form">
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Whatever you want"
+            id="search-box"
+          />
+          <button class="btn form-btn" type="submit">
+            <i class="ri-search-line" id="search-result"></i>
+          </button>
+        </form>
+        <span class="form-note">Or Shift to close</span>
+      </div>
+
+      <button class="btn form-close-btn place-items-center" id="form-close-btn">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <!-- Featured articles -->
+    <section class="featured-articles section-header-offset">
+      <div class="featured-articles-container container d-grid">
+        <div class="featured-content d-grid">
+          <div class="headline-banner">
+            <h3 class="headline fancy-border">
+              <span style="color: black" class="place-items-center"
+                >Exciting blogs</span
+              >
+            </h3>
+            <span class="headline-description"
+              >AI Robot Becomes Teacher at Local School
+            </span>
+          </div>
+
+          <a
+            style="margin-top: -20px"
+            href="./post.html"
+            class="article featured-articles featured-article-1"
+          >
+            <img
+              src="./assets/images/featured/3rdblogimage.jpg"
+              alt=""
+              class="article-image"
+            />
+            <span class="article-category">Travel</span>
+            <div class="article-data-container">
+              <div class="article-data">
+                <span>Dec 24th 2025</span>
+                <span class="article-data-spacer"></span>
+                <span>8 min read</span>
+              </div>
+              <h3 class="title article-title">
+                Discover the Faroe Islands: Europe's Hidden Gem
+              </h3>
+            </div>
+          </a>
+          <a
+            href="./post.html"
+            class="article featured-articles featured-article-1"
+          >
+            <img
+              src="./assets/images/featured/2ndblogdata.jpg"
+              alt=""
+              class="article-image"
+            />
+            <span class="article-category">Food</span>
+            <div class="article-data-container">
+              <div class="article-data">
+                <span>Dec 15th 2025</span>
+                <span class="article-data-spacer"></span>
+                <span>7 min read</span>
+              </div>
+              <h3 class="title article-title">
+                Zero-Waste Cooking and Packaging
+              </h3>
+            </div>
+          </a>
+          <a
+            href="./post.html"
+            class="article featured-articles featured-article-1"
+          >
+            <img
+              src="./assets/images/featured/1stBlogPicture.jpg"
+              alt=""
+              class="article-image"
+            />
+            <span class="article-category">Tech</span>
+            <div class="article-data-container">
+              <div class="article-data">
+                <span>Dec 24th 2025</span>
+                <span class="article-data-spacer"></span>
+                <span>10 min read</span>
+              </div>
+              <h3 class="title article-title">Is AI superior to humans?</h3>
+            </div>
+          </a>
+          <a
+            href="./post.html"
+            class="article featured-articles featured-article-1"
+          >
+            <img
+              src="./assets/images/featured/blogiamg4.jpg"
+              alt=""
+              class="article-image"
+            />
+            <span class="article-category">Health</span>
+            <div class="article-data-container">
+              <div class="article-data">
+                <span>Dec 24th 2024</span>
+                <span class="article-data-spacer"></span>
+                <span>5 min read</span>
+              </div>
+              <h3 class="title article-title">
+                Health Benefits of Natural Sugars
+              </h3>
+            </div>
+          </a>
+        </div>
+        <!-- sidebar -->
+        <div class="headline-banner" style="margin-top: 25px">
+          <h3 class="headline fancy-border">
+            <span style="color: black" class="place-items-center">Trending Pictures</span>
+          </h3>
+          <span class="headline-description">Trending Pictures</span>
+        </div>
+        
+        <div class="sidebar d-grid" id="template-picture-card">
+          <div style="width: 100%;" id="image-cards-container">
+            <!-- Cards will be dynamically inserted here -->
+          </div>
+        </div>
+        
+        
+        
+        
+        </div>
+        <div class="seemore-Body">
+          <a id="show-more-btn" class="image_butn">
+            <span class="image_text">
+              See More
+              <img
+                src="/Starter/assets/images/Btniamge/Cicon.png"
+                alt=""
+                class="button_cone"
+              />
+
+              <img
+                src="/Starter/assets/images/Btniamge/Aicon.png"
+                alt=""
+                class="button_torus"
+              />
+              <img
+                src="/Starter/assets/images/Btniamge/icosa.png"
+                alt=""
+                class="button_iso"
+              />
+              <img
+                src="/Starter/assets/images/Btniamge/Bicon.png"
+                alt=""
+                class="button_sphare"
+              />
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Quick read -->
+     <section class="quick-read section">
+      <div class="container">
+        <h2 class="title section-title" data-name="Quick Blogs">
+          Quick Blogs
+        </h2>
+         <div class="swiper">
+          <div class="swiper-wrapper">
+            <a href="#" class="article swiper-slide">
+              <img src="./assets/images/quick_read/quick_read_new1_20.jpg" alt="" class="article-image">
+             
+              <div class="article-data-container">
+                <div class="article-data">
+                  <span>Dec 24th 2024</span>
+                  <span class="article-data-spacer"></span>
+                  <span>5 min read</span>
+                </div>
+                <h3 class="title article-title">
+                  Health Benefits of Natural Sugars
+                </h3>
+              </div>
+            </a>
+
+            <a href="#" class="article swiper-slide">
+              <img src="./assets/images/quick_read/quick_read_2.jpg" alt="" class="article-image">
+             
+              <div class="article-data-container">
+                <div class="article-data">
+                  <span>Dec 24th 2024</span>
+                  <span class="article-data-spacer"></span>
+                  <span>5 min read</span>
+                </div>
+                <h3 class="title article-title">
+                  Health Benefits of Natural Sugars
+                </h3>
+              </div>
+            </a>
+
+            <a href="#" class="article swiper-slide">
+              <img src="./assets/images/quick_read/quick_read_new3_20.jpg" alt="" class="article-image">
+             
+              <div class="article-data-container">
+                <div class="article-data">
+                  <span>Dec 24th 2024</span>
+                  <span class="article-data-spacer"></span>
+                  <span>5 min read</span>
+                </div>
+                <h3 class="title article-title">
+                  Health Benefits of Natural Sugars
+                </h3>
+              </div>
+            </a>
+
+            <a href="#" class="article swiper-slide">
+              <img src="./assets/images/quick_read/quick_read_4new_20.jpg" alt="" class="article-image">
+             
+              <div class="article-data-container">
+                <div class="article-data">
+                  <span>Dec 24th 2024</span>
+                  <span class="article-data-spacer"></span>
+                  <span>5 min read</span>
+                </div>
+                <h3 class="title article-title">
+                  Health Benefits of Natural Sugars
+                </h3>
+              </div>
+            </a>
+            <a href="#" class="article swiper-slide">
+              <img src="./assets/images/quick_read/quick_read_5.jpg" alt="" class="article-image">
+             
+              <div class="article-data-container">
+                <div class="article-data">
+                  <span>Dec 24th 2024</span>
+                  <span class="article-data-spacer"></span>
+                  <span>5 min read</span>
+                </div>
+                <h3 class="title article-title">
+                  Health Benefits of Natural Sugars
+                </h3>
+              </div>
+            </a>
+            <a href="#" class="article swiper-slide">
+              <img src="./assets/images/quick_read/quick_read_6.jpg" alt="" class="article-image">
+             
+              <div class="article-data-container">
+                <div class="article-data">
+                  <span>Dec 24th 2024</span>
+                  <span class="article-data-spacer"></span>
+                  <span>5 min read</span>
+                </div>
+                <h3 class="title article-title">
+                  Health Benefits of Natural Sugars
+                </h3>
+              </div>
+            </a>
+
+            <a href="#" class="article swiper-slide">
+              <img src="/assets/images/quick_read/quick_read_6.jpg" alt="" class="article-image">
+             
+              <div class="article-data-container">
+                <div class="article-data">
+                  <span>Dec 24th 2024</span>
+                  <span class="article-data-spacer"></span>
+                  <span>5 min read</span>
+                </div>
+                <h3 class="title article-title">
+                  Health Benefits of Natural Sugars
+                </h3>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-button-prev swiper-controls"></div>
+          <div class="swiper-button-next swiper-controls"></div> 
+         <div class="swiper-pagination"></div>
+        </div>
+      </div>
+     </section>
+    <!-- Older posts -->
+    <section class="older-posts section">
+      <h2 class="title section-title" data-name="Trending News" style="margin-left: 15px;">Trending News</h2>
+      
+      <div id="sections-container">
+    <div class="headline-banner-tt" style="margin-top: 25px; ">
+        <h3 class="headline fancy-border">
+            <span style="color: black" class="place-items-center">Techn</span>
+        </h3>
+        <h3 class="headline-description-news">AI Robot Becomes Teacher at Local School</h3>
+    </div>
+    <div class="headline-banner-tt" style="margin-top: 25px; ">
+        <h3 class="headline fancy-border">
+            <span style="color: black" class="place-items-center">Politics</span>
+        </h3>
+        <h3 class="News-headline-description">AI Robot Becomes Teacher at Local School</h3>
+    </div>
+    <div class="headline-banner-tt" style="margin-top: 25px; ">
+        <h3 class="headline fancy-border">
+            <span style="color: black" class="place-items-center">Movies</span>
+        </h3>
+        <h3 class="News-headline-description" style="">AI Robot Becomes Teacher at Local School</h3>
+    </div>
+    <div class="headline-banner-tt" style="margin-top: 25px; ">
+        <h3 class="headline fancy-border">
+            <span style="color: black" class="place-items-center">World</span>
+        </h3>
+        <h3 class="News-headline-description">AI Robot Becomes Teacher at Local School</h3>
+    </div>
+</div>
+
+    
+      <div class="container">
+        <div class="swiper-controls-wrapper">
+          <div class="swiper-button-prev swiper-controls-news" style="color: transparent; margin-right: 120px;">&lt;</div>
+          <div class="swiper-button-next swiper-controls-news" style="color: transparent;">&gt;</div>
+        </div>
+        <div class="swiper-pagination"></div>
+    
+        <div class="older-posts-grid-wrapper d-grid" id="cardcontainer">
+          <template id="template-news-card">
+            <a href="#" class="article d-grid">
+              <div class="older-posts-article-image-wrapper">
+                <img src="https://via.placeholder.com/180" alt="" class="article-image" id="news-img">
+              </div>
+              <div class="article-data-container">
+                <div class="article-data">
+                  <h4 id="news-source">Dec 24th 2024</h4>
+                </div>
+                <h3 class="title article-title" id="news-title">Health Benefits of Natural Sugars</h3>
+                <p class="article-description" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, beatae minima! Ipsam, nobis laborum?</p>
+              </div>
+            </a>
+          </template>
+        </div>
+    
+        <div class="see-more-container">
+          <a href="#" class="btn see-more-btn place-item-center">
+            See more <i class="ri-arrow-right-s-line"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- Popular tags -->
+     <section class="popular-tags section">
+      <div class="container">
+
+        <h2 class="title section-title" data-name="Popular Tags" style="margin-left: 15px;">Popular Tags</h2>
+        <div class="popular-tags-container d-grid">
+          <a href="#" class="article">
+            <span class="tag-name">#Travel</span>
+            <img src="/Starter/assets/images/tags/travel-tag.jpg" alt="" class="article-image">
+          </a>
+
+          <a href="#" class="article">
+            <span class="tag-name">#Food</span>
+            <img src="/Starter/assets/images/tags/travel-tag.jpg" alt="" class="article-image">
+          </a>
+
+          <a href="#" class="article">
+            <span class="tag-name">#Tech</span>
+            <img src="/Starter/assets/images/tags/travel-tag.jpg" alt="" class="article-image">
+          </a>
+
+          <a href="#" class="article">
+            <span class="tag-name">#Health</span>
+            <img src="/Starter/assets/images/tags/travel-tag.jpg" alt="" class="article-image">
+          </a>
+
+          <a href="#" class="article">
+            <span class="tag-name">#Fashion</span>
+            <img src="/Starter/assets/images/tags/travel-tag.jpg" alt="" class="article-image">
+          </a>
+
+          <a href="#" class="article">
+            <span class="tag-name">#Sports</span>
+            <img src="/Starter/assets/images/tags/travel-tag.jpg" alt="" class="article-image">
+          </a>
+          </div>
+      </div>
+     </section>
+
+    <!-- Newsletter -->
+
+    <!-- Footer -->
+
+      <footer>
+        <div class="row">
+          <div class="col">
+            <img src="./assets/images/Main Logo/logo.png" alt="" class="logo-footer">
+            <p class="para1">The sun dipped below the horizon, casting an amber glow across the landscape. Birds chirped their final songs of the day as the first stars began to twinkle in the twilight sky. A gentle breeze rustled through the trees, carrying the scent of blooming jasmine</p>
+          </div>
+          <div class="col">
+            <h3 class="h3-about-us">About Us <div class="underline"><span></span></div></h3>
+            <p class="para1">Explore our open-source platform
+            for the latest news and insightful blogs on diverse topics
+            Stay informed, inspired, and contribute to our community driven content
+           </p>
+            <p class="email-id">shyanilmishra@gmail.com</p>
+
+          </div>
+          <div class="col">
+            <h3 class="h3-Links">Links  <div class="underline"><span></span></div></h3>
+            <ul>
+              <li class="">Categories</li>
+              <li class="">Career</li>
+              <li class="">Feedback</li>
+              <li class="">Pricing</li>
+              <li class="">Mobile App</li>  
+              <li class="">Our Members</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3 class="h3-Get-in-Touch">Get in Touch <div class="underline"><span></span></div></h3>
+            <form class="contact-form">
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <a href="https://chatgpt.com/?model=auto">
+                <input type="text" placeholder="Enter your email" required>
+              </a>
+              <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+          
+            <div class="social-icon">
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-solid fa-inbox"></i>
+            </div>
+          </div>
+          
+          
+        </div>
+        <hr>
+        <p class="copyright">Copyright © 2025. All rights reserved</p>
+      </footer>
+  
+    <!-- <script
+      src="//code.tidio.co/jcqjfmhwpkpv2exw4sbkvb2ykiyd4veh.js"
+      async
+    ></script> -->
+    <!-- Swiper.js -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- Custom script -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
