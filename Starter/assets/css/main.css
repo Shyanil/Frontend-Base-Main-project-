@@ -835,198 +835,352 @@ a {
 /* Newsletter */
 
 /* Footer */
-footer {
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
-
-  padding: 10px 0;
-  text-align: center;
-  color: #000000;
-  font-size: 13px;
-  border-top-left-radius: 145px;
-  padding: 100px 0 30px;
-  line-height: 20px;
-}
-
-.logo-footer {
-  width: 80%;
-  margin-bottom: 30px;
-}
-.row {
-  width: 85%;
-  display: flex;
-  margin: 0;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.col {
-  flex-basis: 25%;
-  padding: 10px;
-}
-.col:nth-child(2),
-.col:nth-child(3) {
-  flex-basis: 15%;
-}
-.col h3 {
-  position: relative;
-  margin-bottom: 40px;
-  width: fit-content;
-}
-.h3-about-us {
-  margin-left: 60px;
-}
-.email-id {
-  width: fit-content;
-  border-bottom: 1px solid #289d4f;
-  margin: 20px 0;
-}
-ul li {
-  list-style: none;
-  margin-bottom: 12px;
-}
-ul li a {
-  text-decoration: none;
-  color: black;
-}
-form {
-  padding-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #289d4f;
-  margin-bottom: 50px;
-}
-form .fa {
-  font-size: 18px;
-  margin-right: 10px;
-}
-form input {
-  width: 100%;
+.footer {
+  background-color: #9b59b6;
   color: white;
-  background: transparent;
-  border: 0;
-  outline: none;
+  padding: 50px 0;
+  text-align: center;
+  perspective: 1000px; /* Added perspective for 3D effect */
+  position: relative;
+  border-top-left-radius: 145px;
+  user-select: none; /* Disable text selection in the footer */
 }
 
-.social-icon .fa-brands,
-.fa-solid {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 40px;
-  font-size: 20px;
-  color: #000;
-  background: rgb(112, 240, 231);
-  margin-right: 15px;
-  cursor: pointer;
-}
-.hr {
-  width: 90%;
-  border: 0;
-  border-bottom: 1px solid #000000;
-  margin: 20px auto;
-}
-.copyright {
-  text-align: center;
-  margin-top: 15px;
-}
-.underline {
-  width: 100%;
-  height: 5px;
-  background: #0cffe7;
-  border-radius: 3px;
-  position: absolute;
-  top: 25px;
-  left: 0;
-  overflow: hidden;
-}
-.underline span {
-  width: 15px;
-  height: 100%;
-  background: #616161;
-  border-radius: 3px;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  animation: moving 2s linear infinite;
+.main-content {
+  position: relative; /* Enable positioning for animation */
+  z-index: 1; /* Ensure it's above other content */
+  margin-top: -80px; /* Adjust based on design preferences */
+  transform-style: preserve-3d; /* Enable 3D transforms */
+  user-select: none; /* Disable text selection in the main content */
 }
 
-@keyframes moving {
+.main-title {
+  font-family: "Arial Black", sans-serif;
+  font-size: 175px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0;
+  margin-top: 220px;
+  margin-left: 10px;
+  margin-right: -40px;
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  color: transparent; /* Ensure the text color is transparent */
+  background: url("https://i.pinimg.com/originals/13/44/cd/1344cdb8afc60644ab100307da6c3487.gif")
+    repeat;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
   0% {
-    left: -20px;
+    background-position: 0 0;
   }
   100% {
-    left: 100%;
+    background-position: 0 100%;
   }
 }
 
-@media (max-width: 768px) {
-  footer {
-    bottom: unset;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Ensures responsiveness */
+  padding: 0 10%;
+  position: relative; /* Enable positioning for animation */
+  z-index: 0; /* Ensure it's below main content */
+  user-select: none; /* Disable text selection in footer content */
+}
+
+.footer-left {
+  flex: 1; /* Expands to fill available space */
+  text-align: left; /* Adjust alignment for better readability */
+  padding: 0 20px; /* Add some padding for breathing space */
+  margin-top: -180px; /* Move the footer-left content higher */
+  margin-left: -100px;
+  width: 40%; /* Adjust width */
+  user-select: none; /* Disable text selection in footer left */
+}
+
+.footer-left p {
+  font-size: 18px; /* Adjust font size for readability */
+  margin-bottom: 15px; /* Slightly reduce margin for compactness */
+  user-select: none; /* Disable text selection for paragraphs */
+}
+
+.footer-left button {
+  background-color: white;
+  color: #9b59b6;
+  border: 2px solid white; /* Added border for visibility */
+  padding: 12px 24px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease; /* Smooth hover effect */
+  transform-style: preserve-3d; /* Enable 3D transforms */
+  user-select: none; /* Disable text selection for buttons */
+}
+
+.footer-left button:hover {
+  background-color: #9b59b6;
+  color: white;
+  transform: rotateX(20deg) rotateY(20deg); /* Apply 3D rotation on hover */
+}
+
+.footer-right {
+  flex: 1; /* Expands to fill available space */
+  display: flex;
+  flex-direction: column; /* Stack text and icons vertically */
+  align-items: flex-end; /* Align to the right */
+  position: absolute; /* Positioning relative to the footer */
+  top: 50px; /* Adjust as necessary */
+  right: 50px; /* Adjust as necessary */
+  user-select: none; /* Disable text selection in footer right */
+}
+
+.so {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between text and icons */
+  user-select: none; /* Disable text selection for .so */
+}
+
+.footer-links {
+  display: flex;
+  align-items: center; /* Center items horizontally */
+  cursor: pointer;
+  user-select: none; /* Disable text selection for footer links */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Display icons in a single line */
+  cursor: pointer;
+  user-select: none; /* Disable text selection for footer links */
+}
+
+.footer-links ul li {
+  margin: 0 5px; /* Space between icons */
+  font-size: 20px; /* Adjust font size for icons */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  cursor: pointer;
+  user-select: none; /* Disable text selection for list items */
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none; /* Disable text selection for links */
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-links ul li:hover i {
+  transform: translateY(-10px) scale(1.2); /* Slight scaling and translation on hover */
+  color: #ffffff; /* Keep color white on hover */
+  cursor: pointer;
+}
+
+.footer-bottom {
+  margin-top: 20px; /* Reduced top margin for compactness */
+  font-size: 12px; /* Smaller font size for copyright notice */
+  cursor: pointer;
+  user-select: none; /* Disable text selection in footer bottom */
+}
+
+.random-content {
+  position: absolute;
+  left: 5%; /* Move more to the left */
+  top: 80%; /* Adjusted to be slightly lower */
+  transform: translateY(-50%);
+  width: 20%; /* Smaller width */
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent background */
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  animation: slideIn 0.8s ease-out, fadeIn 1s ease-out;
+  user-select: none; /* Disable text selection */
+  border-radius: 40px;
+}
+
+.random-content h3 {
+  font-family: "Roboto", sans-serif; /* Modern font */
+  font-size: 20px; /* Slightly smaller font size */
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
+}
+
+.random-content p {
+  font-family: "Open Sans", sans-serif; /* Modern font */
+  font-size: 14px; /* Slightly smaller font size */
+  margin-bottom: 10px;
+  line-height: 1.5; /* Better readability */
+}
+
+.random-content p a {
+  color: #0dfbff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.random-content p a:hover {
+  color: #000000;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  .col {
-    flex-basis: 100%;
+  to {
+    opacity: 1;
   }
-  .col:nth-child(2),
-  .col:nth-child(3) {
-    flex-basis: 100%;
+}
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .main-title {
+    font-size: 80px;
+    margin-top: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center; /* Center the text */
   }
-  .para1 {
-    text-align: justify;
-    margin-left: 30px;
-    line-height: 1.6;
+
+  .footer {
+    padding: 20px 0;
+    border-top-left-radius: 75px;
   }
-  .email-id {
-    margin-left: 30px;
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px 25px;
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+  }
+
+  .footer-left {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 0 10px;
+    text-align: center; /* Center the text */
+  }
+
+  .footer-right {
+    width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left p {
     font-size: 16px;
-    font-family: "Arial", sans-serif;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s,
-      color 0.3s;
   }
 
-  .email-id:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    background-color: #f9f9f9;
-    color: #007bff;
-  }
-  .h3-about-us {
-    margin-left: 33px;
-  }
-  .h3-Links {
-    margin-left: 34px;
-  }
-  .h3-Get-in-Touch {
-    margin-left: 34px;
-  }
-  .contact-form {
-    margin-left: 34px;
+  .footer-left button {
+    padding: 10px 20px;
   }
 
-  .icon-wrapper {
-    display: inline-block;
-
-    border-radius: 50%;
-    padding: 5px; /* Adjust the padding for mobile */
+  .footer-left button:hover {
+    background-color: #9b59b6;
+    color: white;
+    transform: rotateX(20deg) rotateY(20deg); /* Apply 3D rotation on hover */
   }
 
-  .icon-wrapper i {
-    font-size: 18px; /* Adjust the icon size for mobile */
+  .footer-links ul {
+    flex-direction: row;
+    justify-content: center; /* Center the links horizontally */
   }
-  .social-icon {
-    margin-left: 20px;
+
+  .footer-links ul li {
+    margin: 0 10px;
+    font-size: 18px;
   }
-  .copyright {
-    margin-left: -30px;
+
+  .random-content {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px; /* Increase margin to move it further down */
+    padding: 10px;
+    text-align: center; /* Center the content */
+  }
+
+  .random-content h3 {
+    font-size: 18px;
+  }
+
+  .random-content p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-title {
+    font-size: 60px;
+    margin-top: 80px;
+    text-align: center; /* Center the text */
+  }
+
+  .footer-left {
+    text-align: center; /* Center the text */
+  }
+
+  .footer-left button {
+    padding: 8px 16px;
+  }
+
+  .footer-left button:hover {
+    background-color: #9b59b6;
+    color: white;
+    transform: rotateX(20deg) rotateY(20deg); /* Apply 3D rotation on hover */
+  }
+
+  .footer-links ul li {
+    margin: 0 5px;
+    font-size: 16px;
+  }
+
+  .footer-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .random-content {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px; /* Increase margin to move it further down */
+    padding: 8px;
+    text-align: center; /* Center the content */
+    margin-right: 30px;
+    position: relative;
+  }
+
+  .random-content h3 {
+    font-size: 16px;
+  }
+
+  .random-content p {
+    font-size: 10px;
   }
 }
 /* Scrollbar styles */

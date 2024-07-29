@@ -1,199 +1,283 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NewsFlash | Post</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon.png"
+    />
     <!-- Remix icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <!-- Swiper.js styles -->
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <!-- Custom styles -->
-    <link rel="stylesheet" href="./assets/css/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Header -->
     <header class="header" id="header">
+      <nav class="navbar container">
+        <a href="./index.html">
+          <h2 class="logo">NewsFlash</h2>
+        </a>
 
-        <nav class="navbar container">
+        <div class="menu" id="menu">
+          <ul class="list">
+            <li class="list-item">
+              <a href="#" class="list-link current">Home</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">Categories</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">Reviews</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">News</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">Membership</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">Contact</a>
+            </li>
+            <li class="list-item screen-lg-hidden">
+              <a href="#" class="list-link">Sign in</a>
+            </li>
+            <li class="list-item screen-lg-hidden">
+              <a href="#" class="list-link">Sign up</a>
+            </li>
+          </ul>
+        </div>
 
-            <a href="./index.html">
-                <h2 class="logo">NewsFlash</h2>
-            </a>
+        <div class="list list-right">
+          <button class="btn place-items-center" id="theme-toggle-btn">
+            <i class="ri-sun-line sun-icon"></i>
+            <i class="ri-moon-line moon-icon"></i>
+          </button>
 
-            <div class="menu" id="menu">
-                <ul class="list">
-                    <li class="list-item">
-                        <a href="#" class="list-link current">Home</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Categories</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Reviews</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">News</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Membership</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Contact</a>
-                    </li>
-                    <li class="list-item screen-lg-hidden">
-                        <a href="#" class="list-link">Sign in</a>
-                    </li>
-                    <li class="list-item screen-lg-hidden">
-                        <a href="#" class="list-link">Sign up</a>
-                    </li>
-                </ul>
-            </div>
+          <button class="btn place-items-center" id="search-icon">
+            <i class="ri-search-line"></i>
+          </button>
 
-            <div class="list list-right">
-                <button class="btn place-items-center" id="theme-toggle-btn">
-                    <i class="ri-sun-line sun-icon"></i>
-                    <i class="ri-moon-line moon-icon"></i>
-                </button>
+          <button
+            class="btn place-items-center screen-lg-hidden menu-toggle-icon"
+            id="menu-toggle-icon"
+          >
+            <i class="ri-menu-3-line open-menu-icon"></i>
+            <i class="ri-close-line close-menu-icon"></i>
+          </button>
 
-                <button class="btn place-items-center" id="search-icon">
-                    <i class="ri-search-line"></i>
-                </button>
-
-                <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
-                    <i class="ri-menu-3-line open-menu-icon"></i>
-                    <i class="ri-close-line close-menu-icon"></i>
-                </button>
-
-                <a href="#" class="list-link screen-sm-hidden">Sign in</a>
-                <a href="#" class="list-link screen-sm-hidden btn sign-up-btn fancy-border">
-                    <span>Sign in</span>
-                </a>
-            </div>
-        </nav>
-
+          <a href="#" class="list-link screen-sm-hidden">Sign in</a>
+          <a
+            href="#"
+            class="list-link screen-sm-hidden btn sign-up-btn fancy-border"
+          >
+            <span>Sign in</span>
+          </a>
+        </div>
+      </nav>
     </header>
 
     <!-- Search -->
     <div class="search-form-container container" id="search-form-container">
+      <div class="form-container-inner">
+        <form action="" class="form">
+          <input
+            type="text"
+            class="form-input"
+            placeholder="What are looking for?"
+          />
+          <button class="btn form-btn" type="submit">
+            <i class="ri-search-line"></i>
+          </button>
+        </form>
+        <span class="form-note">Or press ESC to close.</span>
+      </div>
 
-        <div class="form-container-inner">
-
-            <form action="" class="form">
-                <input type="text" class="form-input" placeholder="What are looking for?">
-                <button class="btn form-btn" type="submit">
-                    <i class="ri-search-line"></i>
-                </button>
-            </form>
-            <span class="form-note">Or press ESC to close.</span>
-        </div>
-
-        <button class="btn form-close-btn place-items-center" id="form-close-btn">
-            <i class="ri-close-line"></i>
-        </button>
-
+      <button class="btn form-close-btn place-items-center" id="form-close-btn">
+        <i class="ri-close-line"></i>
+      </button>
     </div>
     <!-- Blog post -->
-    
-    <!-- Footer -->
-    <footer class="footer section">
-        <div class="footer-container container d-grid">
-            
-            <div class="company-data">
-                <a href="./index.html">
-                    <h2 class="logo">NewsFlash</h2>
-                </a>
-                <p class="company-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, iure. Harum, animi dolores, nam, ad magni expedita.</p>
-                <ul class="list social-media">
-                    <li class="list-item">
-                        <a href="#" class="list-link"><i class="ri-instagram-line"></i></a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link"><i class="ri-facebook-circle-line"></i></a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link"><i class="ri-twitter-line"></i></a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link"><i class="ri-pinterest-line"></i></a>
-                    </li>
-                </ul>
-                <span class="copyright-notice">&copy;2021 NewsFlash. All rights reserved.</span>
-            </div>
+    <!-- Blog post -->
+    <section class="blof-post section-header-offset">
+      <div class="blog-post-container container">
+        <div class="blog-post-data">
+          <h3 class="blog-post-title">
+            Discover the Faroe Islands: Europe's Hidden Gem
+          </h3>
+          <div class="article-data">
+            <span>Dec 24th 2024</span>
+            <span class="article-data-spacer"></span>
+            <span>5 min read</span>
+          </div>
+          <img
+            src="./assets/images/featured/2ndblogdata.jpg"
+            alt="Faroe Islands"
+            class="article-image"
+            width="600"
+            height="200"
+          />
 
-            <div>
-                <h6 class="title footer-title">Categories</h6>
-                <ul class="footer-list list">
-                    <li class="list-item">
-                        <a href="#" class="list-link">Travel</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Food</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Technology</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Health</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Nature</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Fitness</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h6 class="title footer-title">Useful links</h6>
-                <ul class="footer-list list">
-                    <li class="list-item">
-                        <a href="#" class="list-link">Home</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Elements</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Tags</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Authors</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Membership</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h6 class="title footer-title">Company</h6>
-                <ul class="footer-list list">
-                    <li class="list-item">
-                        <a href="#" class="list-link">Contact us</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">F.A.Q</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Careers</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Authors</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Memberships</a>
-                    </li>
-                </ul>
-            </div>
+          <!-- Set height to control size -->
+          />
         </div>
+
+        <div class="container">
+          <p>
+            Discover the Faroe Islands: Europe's Hidden Gem. Nestled between
+            Iceland and Norway in the North Atlantic Ocean, the Faroe Islands
+            are an often-overlooked archipelago that offers a unique blend of
+            dramatic landscapes, rich cultural heritage, and unspoiled nature.
+          </p>
+          <p>
+            Spectacular Scenery: The Faroe Islands are famous for their stunning
+            scenery, including:
+          </p>
+          <p>
+            - Mykines Island, renowned for its puffin colonies and spectacular
+            views;
+          </p>
+          <p>
+            - Sørvágsvatn, a lake that appears to hover above the ocean,
+            creating a surreal visual illusion;
+          </p>
+          <p>
+            - Slættaratindur, the highest peak in the Faroe Islands, providing
+            breathtaking panoramic views.
+          </p>
+
+          <blockquote class="quote">
+            <p>
+              <span> <i class="ri-double-quotes-l"></i></span>The Faroe Islands
+              are a unique and exciting destination that offers a diverse and
+              stunning experience. With their stunning beauty, rich culture, and
+              unspoiled nature,<span><i class="ri-double-quotes-l"></i></span>
+            </p>
+          </blockquote>
+          <p>
+            Hiking on numerous trails that offer a chance to explore the rugged
+            beauty of the islands;
+          </p>
+          <p>
+            Bird watching, as the Faroe Islands are a haven for bird enthusiasts
+            with numerous species to observe.
+          </p>
+          <div class="author d-grid">
+            <div class="auther-image-box">
+              <img
+                src="./assets/images/featured/author.jpg"
+                alt="Author"
+                class="article-author-image"
+              />
+            </div>
+            <div class="author-about">
+              <h3 class="author-name">John Doe</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, quia.
+              </p>
+              <ul>
+                <li>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>See how we can help you, get in touch today.</p>
+          <button class="email-button">EMAIL US</button>
+          <button class="phone-button">+44 (0)1414 345 9875</button>
+        </div>
+        <div class="main-content">
+          <h1 class="main-title">VIVASS</h1>
+        </div>
+        <div class="footer-right">
+          <p class="so">Social Media</p>
+          <div class="footer-links">
+            <ul>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-briefcase"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-info-circle"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="random-content">
+          <h3>About Us</h3>
+          <p>
+            <strong>Career:</strong> Join our team of experts and grow with us.
+            <a href="#">Go to career site</a>
+          </p>
+          <p>
+            <strong>Who Made It:</strong> Our dedicated team of developers,
+            designers, and strategists. <a href="#">Learn more about us</a>
+          </p>
+          <p>
+            <strong>Contact:</strong> Reach out for collaboration or inquiries.
+            <a href="#">Get in touch</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy;VIVASS 2024 TAGS PRIVACY</p>
+      </div>
     </footer>
 
     <!-- Swiper.js -->
     <script src="./assets/js/swiper-bundle.min.js"></script>
     <!-- Custom script -->
     <script src="./assets/js/main.js"></script>
-</body>
+  </body>
 </html>

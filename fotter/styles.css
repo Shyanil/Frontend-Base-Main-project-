@@ -1,0 +1,360 @@
+/* Resetting default margin for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Background color for better contrast */
+}
+
+.footer {
+  background-color: #9b59b6;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  perspective: 1000px; /* Added perspective for 3D effect */
+  position: relative;
+  border-top-left-radius: 145px;
+  user-select: none; /* Disable text selection in the footer */
+}
+
+.main-content {
+  position: relative; /* Enable positioning for animation */
+  z-index: 1; /* Ensure it's above other content */
+  margin-top: -80px; /* Adjust based on design preferences */
+  transform-style: preserve-3d; /* Enable 3D transforms */
+  user-select: none; /* Disable text selection in the main content */
+}
+
+.main-title {
+  font-family: "Arial Black", sans-serif;
+  font-size: 175px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0;
+  margin-top: 220px;
+  margin-left: 10px;
+  margin-right: -40px;
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  color: transparent; /* Ensure the text color is transparent */
+  background: url("https://i.pinimg.com/originals/13/44/cd/1344cdb8afc60644ab100307da6c3487.gif")
+    repeat;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Ensures responsiveness */
+  padding: 0 10%;
+  position: relative; /* Enable positioning for animation */
+  z-index: 0; /* Ensure it's below main content */
+  user-select: none; /* Disable text selection in footer content */
+}
+
+.footer-left {
+  flex: 1; /* Expands to fill available space */
+  text-align: left; /* Adjust alignment for better readability */
+  padding: 0 20px; /* Add some padding for breathing space */
+  margin-top: -180px; /* Move the footer-left content higher */
+  margin-left: -100px;
+  width: 40%; /* Adjust width */
+  user-select: none; /* Disable text selection in footer left */
+}
+
+.footer-left p {
+  font-size: 18px; /* Adjust font size for readability */
+  margin-bottom: 15px; /* Slightly reduce margin for compactness */
+  user-select: none; /* Disable text selection for paragraphs */
+}
+
+.footer-left button {
+  background-color: white;
+  color: #9b59b6;
+  border: 2px solid white; /* Added border for visibility */
+  padding: 12px 24px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease; /* Smooth hover effect */
+  transform-style: preserve-3d; /* Enable 3D transforms */
+  user-select: none; /* Disable text selection for buttons */
+}
+
+.footer-left button:hover {
+  background-color: #9b59b6;
+  color: white;
+  transform: rotateX(20deg) rotateY(20deg); /* Apply 3D rotation on hover */
+}
+
+.footer-right {
+  flex: 1; /* Expands to fill available space */
+  display: flex;
+  flex-direction: column; /* Stack text and icons vertically */
+  align-items: flex-end; /* Align to the right */
+  position: absolute; /* Positioning relative to the footer */
+  top: 50px; /* Adjust as necessary */
+  right: 50px; /* Adjust as necessary */
+  user-select: none; /* Disable text selection in footer right */
+}
+
+.so {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between text and icons */
+  user-select: none; /* Disable text selection for .so */
+}
+
+.footer-links {
+  display: flex;
+  align-items: center; /* Center items horizontally */
+  cursor: pointer;
+  user-select: none; /* Disable text selection for footer links */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Display icons in a single line */
+  cursor: pointer;
+  user-select: none; /* Disable text selection for footer links */
+}
+
+.footer-links ul li {
+  margin: 0 5px; /* Space between icons */
+  font-size: 20px; /* Adjust font size for icons */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  cursor: pointer;
+  user-select: none; /* Disable text selection for list items */
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none; /* Disable text selection for links */
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-links ul li:hover i {
+  transform: translateY(-10px) scale(1.2); /* Slight scaling and translation on hover */
+  color: #ffffff; /* Keep color white on hover */
+  cursor: pointer;
+}
+
+.footer-bottom {
+  margin-top: 20px; /* Reduced top margin for compactness */
+  font-size: 12px; /* Smaller font size for copyright notice */
+  cursor: pointer;
+  user-select: none; /* Disable text selection in footer bottom */
+}
+
+.random-content {
+  position: absolute;
+  left: 5%; /* Move more to the left */
+  top: 80%; /* Adjusted to be slightly lower */
+  transform: translateY(-50%);
+  width: 20%; /* Smaller width */
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent background */
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  animation: slideIn 0.8s ease-out, fadeIn 1s ease-out;
+  user-select: none; /* Disable text selection */
+  border-radius: 40px;
+}
+
+.random-content h3 {
+  font-family: "Roboto", sans-serif; /* Modern font */
+  font-size: 20px; /* Slightly smaller font size */
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
+}
+
+.random-content p {
+  font-family: "Open Sans", sans-serif; /* Modern font */
+  font-size: 14px; /* Slightly smaller font size */
+  margin-bottom: 10px;
+  line-height: 1.5; /* Better readability */
+}
+
+.random-content p a {
+  color: #0dfbff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.random-content p a:hover {
+  color: #000000;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .main-title {
+    font-size: 80px;
+    margin-top: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center; /* Center the text */
+  }
+
+  .footer {
+    padding: 20px 0;
+    border-top-left-radius: 75px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+  }
+
+  .footer-left {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 0 10px;
+    text-align: center; /* Center the text */
+  }
+
+  .footer-right {
+    width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left p {
+    font-size: 16px;
+  }
+
+  .footer-left button {
+    padding: 10px 20px;
+  }
+
+  .footer-left button:hover {
+    background-color: #9b59b6;
+    color: white;
+    transform: rotateX(20deg) rotateY(20deg); /* Apply 3D rotation on hover */
+  }
+
+  .footer-links ul {
+    flex-direction: row;
+    justify-content: center; /* Center the links horizontally */
+  }
+
+  .footer-links ul li {
+    margin: 0 10px;
+    font-size: 18px;
+  }
+
+  .random-content {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px; /* Increase margin to move it further down */
+    padding: 10px;
+    text-align: center; /* Center the content */
+  }
+
+  .random-content h3 {
+    font-size: 18px;
+  }
+
+  .random-content p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-title {
+    font-size: 60px;
+    margin-top: 80px;
+    text-align: center; /* Center the text */
+  }
+
+  .footer-left {
+    text-align: center; /* Center the text */
+  }
+
+  .footer-left button {
+    padding: 8px 16px;
+  }
+
+  .footer-left button:hover {
+    background-color: #9b59b6;
+    color: white;
+    transform: rotateX(20deg) rotateY(20deg); /* Apply 3D rotation on hover */
+  }
+
+  .footer-links ul li {
+    margin: 0 5px;
+    font-size: 16px;
+  }
+
+  .footer-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .random-content {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px; /* Increase margin to move it further down */
+    padding: 8px;
+    text-align: center; /* Center the content */
+    margin-right: 30px;
+    position: relative;
+  }
+
+  .random-content h3 {
+    font-size: 16px;
+  }
+
+  .random-content p {
+    font-size: 10px;
+  }
+}
