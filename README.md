@@ -8,9 +8,6 @@ This project is completely a part of the frontend section of our main project. C
 
 Right now, the project utilizes HTML, CSS, JavaScript, News API, and Image API. In the upcoming days, we plan to integrate React and other high-quality frontend technologies. Our goal is to use all industrial feature coding languages.
 
-## ⚠️ Note
-
-This project is only clonable for Bhawesh Jha and Ayush Singh. Currently, this repository is not open source and is out of license. After some months, we will adopt the Apache License and the MIT License, enabling everyone to contribute.
 
 ## 🔙 Back-end Project
 
