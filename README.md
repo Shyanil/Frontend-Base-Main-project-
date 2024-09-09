@@ -24,7 +24,8 @@ Ensure you have Git installed on your local machine. You can download it from [h
 To clone this project, open your terminal and run the following command:
 
 ```bash
-git clone https://github.com/yourusername/your-repository.git
+git clone https://github.com/Shyanil/Frontend-Base-Main-project.git
+
 ```
 
 Replace `yourusername` with your GitHub username and `your-repository` with the name of your repository.
