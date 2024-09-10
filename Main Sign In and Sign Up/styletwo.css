@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  background: #dfdfdf5e;
+  margin-left: 34%;
+  width: 450px;
+  height: 550px;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.Main:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.social-container {
+  position: absolute;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+}
+
+.social {
+  font-size: 24px;
+  color: #333;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.social:hover {
+  background-color: #e0e0e0;
+  color: #555;
+  transform: translateY(-2px);
+}
+
+.login-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  width: 440px;
+  height: 480px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: -39px;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 34px;
+  cursor: pointer;
+  padding: 7px;
+}
+
+.login-header {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+.login-header header {
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.input-box .input-field {
+  width: 100%;
+  height: 50px;
+  font-size: 17px;
+  padding: 11px 20px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
+  outline: none;
+  transition: box-shadow 0.3s;
+}
+
+::placeholder {
+  font-weight: 500;
+  color: black;
+}
+
+.input-field:focus {
+  box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.1);
+}
+
+.forget {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#check {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section a {
+  color: #0022ff;
+}
+
+.input-submit {
+  position: relative;
+  top: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 50px;
+  background: #222;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  color: white;
+  font-weight: 600;
+}
+
+.input-submit label {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #000;
+  transform: scale(1.05);
+}
+
+.signIn-link {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.signIn-link a {
+  color: rgb(0, 140, 255);
+  font-weight: 600;
+}
+
+.Only-phone {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .Main {
+    width: 90%;
+    max-width: 420px;
+    height: auto;
+    margin: 65px auto 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .login-box {
+    padding: 20px;
+  }
+
+  .login-header header {
+    font-size: 24px;
+  }
+
+  .input-box .input-field {
+    height: 45px;
+    font-size: 15px;
+  }
+
+  .submit-btn {
+    height: 45px;
+  }
+
+  .social-container {
+    width: 90%;
+    justify-content: space-around;
+    margin-top: 3px;
+  }
+
+  .social {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  .Only-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    background-color: #7b7b7bc6;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    top: 600px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    outline: none;
+  }
+
+  .Only-phone:hover {
+    background-color: #666666c6;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .Only-phone a {
+    text-decoration: none;
+  }
+
+  .input-submit {
+    top: 7px;
+  }
+
+  .signUp-link {
+    margin-top: 10px;
+  }
+}
